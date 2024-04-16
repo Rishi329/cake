@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cake Website</title>
@@ -12,20 +13,32 @@
             color: #481e14;
         }
         .navbar {
-            overflow: hidden;
-            background-color: #333;
+          
+        /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.3px);
+-webkit-backdrop-filter: blur(2.3px);
         }
         .navbar a {
-            float: left;
+            float: right;
             display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 18px 18px;
             text-decoration: none;
         }
+        #img1{
+            float: left;
+        }
         .navbar a:hover {
             background-color: #ddd;
             color: black;
+        }
+        .navbar img {
+            height: 30px; /* Adjust as needed */
+            margin-right: 10px;
         }
         .slider {
             width: 100%;
@@ -41,6 +54,10 @@
             /* Set the width of each slide */
             /* Add other styling properties for images */
         }
+        #content{
+            padding-left: 20px;
+            padding-top: 80px;
+        }
         .content-container {
             display: flex;
             flex-wrap: wrap;
@@ -51,13 +68,47 @@
             display: block;
         }
         .content-item img {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.19);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6.4px);
+            -webkit-backdrop-filter: blur(6.4px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+            border-color: #ddd;
             width: 100%;
             height: auto;
             flex: 0 0 calc(50% - 20px);
             /* Adjust width and margins as needed */
             margin: 10px;
             /* Add other styling properties for text and images */
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f9eaf3; /* Light pink background */
+            color: #ccbeb9; /* Chocolate color text */
+            text-align: center;
+            padding: 10px 0;
+            font-family: 'Cookie', cursive; /* A cursive font for a more playful look */
+            /* From https://css.glass */
+            background: rgba(179, 166, 166, 0.19);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(209, 203, 203, 0.1);
+            backdrop-filter: blur(6.4px);
+            -webkit-backdrop-filter: blur(6.4px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+          }
+          .footer a {
+            color: #6d4c41;
+            text-decoration: none;
+          }
+          
+          .footer a:hover {
+            text-decoration: underline;
         /* Responsive styling */
         @media only screen and (max-width: 600px) {
             .slider, .slide {
@@ -68,10 +119,10 @@
 </head>
 <body>
     <div class="navbar">
+        <a href="" id="img1"><img src="https://images.alphacoders.com/189/189163.jpg" alt=""></a>
         <a href="#home">Home</a>
         <a href="#cakes">Cakes</a>
         <a href="#contact">Contact</a>
-        <input type="search" id="gsearch" name="gsearch">
     </div>
     <div id="content">
         <h1>Welcome to our Cake Website!</h1>
@@ -131,6 +182,9 @@
         </div>
         <!-- Add more content items as needed -->
     </div>
+    <div class="footer">
+        <p>Footer content goes here</p>
+      </div>
     <script>
         var slides = document.querySelectorAll('.slide');
         var currentSlide = 0;
